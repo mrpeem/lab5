@@ -1,9 +1,15 @@
 'use strict';
 
 // Call this function when the page loads (the "ready" event)
-$(document).ready(function() {
+$(document).ready(function() 
+{
 	initializePage();
-})
+	$(".fname").click(function(event)
+	{
+		event.preventDefault();
+		$(this).text(anagrammedName( $(this).text() ));
+	});
+});
 
 /*
  * Function that is called when the document is ready.
